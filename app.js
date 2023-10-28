@@ -1,20 +1,22 @@
 "use strict";
 
 //selecting elements//
-const score0El = document.querySelector("#score--0");
-const score1El = document.getElementById("score--1");
+const score0El   = document.querySelector("#score--0");
+const score1El   = document.getElementById("score--1");
 const currentEl0 = document.getElementById('current--0');
 const currentEl1 = document.getElementById('current--1');
-const diceEl   = document.querySelector(".dice");
-const btnRoll  = document.querySelector(".btn--roll");
-const btnNew   = document.querySelector(".btn--new");
-const btnHold  = document.querySelector(".btn--hold");
+const diceEl     = document.querySelector(".dice");
+const btnRoll    = document.querySelector(".btn--roll");
+const btnNew     = document.querySelector(".btn--new");
+const btnHold    = document.querySelector(".btn--hold");
 //starting condition
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add("hidden");
-let currentScore = 0;
-let activePlayer = 0;
+
+ const score = [0, 0];
+let currentScore     = 0;
+let activePlayer     = 0;
 
 //rolling dice functionality//
 
@@ -28,6 +30,7 @@ let activePlayer = 0;
 
   if(dice != 1)  {
     currentScore = currentScore + dice ;
+    document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     currentEl0.textContent = currentScore;
   } else {
     activePlayer =  currentEl1 + dice;
@@ -35,3 +38,18 @@ let activePlayer = 0;
 
   }
 });
+
+// document.querySelector(".btn--new").addEventListener("click", function () {
+//   number = Math.trunc(Math.random() * 6) + 1;
+//   console.log(btn);
+//   document.querySelector(".score").textContent = "1";
+
+//   document.querySelector(".score").textContent = score;
+
+  // document.querySelector(".number").textContent = "?";
+  // document.querySelector(".guess").value = "";
+
+  // document.querySelector("body").style.backgroundColor = "#222";
+  // document.querySelector(".number").style.width = "";
+
+  // document.querySelector(".setting").getAnimations = "5s";
