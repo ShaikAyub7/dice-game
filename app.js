@@ -19,6 +19,14 @@ diceEl.classList.add("hidden");
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+const switchPlayer = function() {
+
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+}
 
 //rolling dice functionality//
 
@@ -31,18 +39,13 @@ btnRoll.addEventListener("click", function () {
   if (dice !== 1) {
     currentScore += dice;
     document.getElementById(`current--${activePlayer}`).textContent = currentScore;
-    currentEl0.textContent = currentScore;
+    // currentEl0.textContent = currentScore;
+
     // document.querySelector(".player--0").style.backgroundColor = "#222";
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    player0El.classList.toggle('player--active');
-    player1El.classList.toggle('player--active');
+   switchPlayer();
   
   }
-
- 
 });
 
   document.addEventListener("keydown", function (e) {
@@ -51,6 +54,19 @@ btnRoll.addEventListener("click", function () {
     document.querySelector('.btn--roll');
   }
 });
+
+btnHold.addEventListener('click', function() {
+
+scores[activePlayer] += currentScore;
+// score[1] = score[1] + currentScore
+document.getElementById(`current--${activePlayer}`).textContent = scores[activePlayer];
+
+switchPlayer();
+
+});
+
+
+
 
 
 
