@@ -12,14 +12,36 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnNew = document.querySelector(".btn--new");
 const btnHold = document.querySelector(".btn--hold");
 //starting condition
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add("hidden");
-
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true ;
+
+
+
+const init = function() {
+  const scores = [0, 0];
+  let currentScore = 0;
+  let activePlayer = 0;
+  let playing = true ;
+
+
+
+  score1El.textContent = 0;
+  score0El.textContent = 0;
+  currentEl0.textContent = 0;
+  currentEl1.textContent = 0;
+
+  diceEl.classList.add("hidden");
+player0El.classList.remove('player--winner');
+player1El.classList.remove('player--winner');
+player0El.classList.add('player--active');
+player1El.classList.remove('player--active');
+
+
+};
+init();
+
 
 
 
@@ -73,6 +95,8 @@ document.getElementById(`score--${activePlayer}`).textContent = scores[activePla
 if (scores[activePlayer] >= 10) {
 
   playing = false ;
+  diceEl.classList.add("hidden");
+
   document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
   
   document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
@@ -90,6 +114,19 @@ if (scores[activePlayer] >= 10) {
   }
 });
 
+document.querySelector('btn--new').addEventListener('click', function() {
+
+  document.querySelector('.score--1').textContent = '0' ;
+  document.querySelector('.score--0').textContent = '0' ;
+  document.querySelector('#current--1').textContent = 0;
+  document.querySelector('#current--0').textContent = 0;
+});
+btnNew.addEventListener('click',function (){
+init();
+
+
+
+});
 
 
 
