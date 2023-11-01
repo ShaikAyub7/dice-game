@@ -11,6 +11,7 @@ const diceEl = document.querySelector(".dice");
 const btnRoll = document.querySelector(".btn--roll");
 const btnNew = document.querySelector(".btn--new");
 const btnHold = document.querySelector(".btn--hold");
+const winner = document.querySelector(".player2");
 //starting condition
 let scores, currentScore, activePlayer, playing;
 
@@ -35,6 +36,11 @@ player0El.classList.remove('player--winner');
 player1El.classList.remove('player--winner');
 player0El.classList.add('player--active');
 player1El.classList.remove('player--active');
+winner.classList.add('hidden');
+
+// document.querySelector.classList.remove('.player');
+// player = false;
+
 
 
 };
@@ -98,6 +104,12 @@ if (scores[activePlayer] >= 10) {
   document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
   
   document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+
+winner.classList.remove('hidden');
+
+  
+
+  // document.querySelector('.player').textContent = 'congratulations';
   // btnRoll.classList.remove('btn--roll');
   // document.querySelector(".btn").style.btn = '';
 

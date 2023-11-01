@@ -17,7 +17,7 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #a2d2ff 20%, #ff758f 100%);
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
@@ -27,11 +27,13 @@ main {
   position: relative;
   width: 100rem;
   height: 60rem;
+  top: 15%;
+  left: 25%;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.50);
+  border-radius: 15px;
   overflow: hidden;
   display: flex;
 }
@@ -168,4 +170,26 @@ main {
 }
 .hidden {
   display: none;
+}
+.player2{
+   top: 5%;
+   left: 38% ;
+  position: absolute;
+  /* background-image:linear-gradient(to left top, #a2d2ff 20%, #ff758f 80%); */
+  font-size: 50px;
+  border: 2px  black;
+  padding: 5px 5px 5px 5px;
+  border-radius: 20px;
+  /* display: flex; */
+  font-family:'Times New Roman', Times, serif;
+
+}
+.points{
+  line-height: 30px;
+  position:absolute;
+  bottom: 10px;
+  right:10px;
+  padding: 5px 5px 5px 5px;
+  background-color: #fff;
+  
 }
