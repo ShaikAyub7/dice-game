@@ -21,6 +21,7 @@ const ayub = function (){
 ('hi you logged the console with function');
 };
 console.log(ayub);
+console.log(ayub);
 
 //  let naam = "ayuu";
 // if (naam = "ayuu") {
