@@ -22,8 +22,6 @@ const ayub = function (){
 };
 console.log(ayub);
 console.log(ayub);
-console.log(ayub);
-
 
 //  let naam = "ayuu";
 // if (naam = "ayuu") {
