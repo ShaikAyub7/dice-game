@@ -8,4 +8,4 @@ const ayub = function () {};
 const arsalan = [1990, 1991, 2002, 2001];
 console.log(arsalan[1]);
 
-console.log(saad);
+// console.log(saad);
