@@ -54,15 +54,21 @@ btnRoll.addEventListener("click", function () {
     // console.log(dice);
     diceEl.classList.remove("hidden");
     diceEl.src = `dice-${dice}.png`;
+    // alert('you got one. you want to continue');
+
+   
 
     if (dice !== 1) {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
       currentEl0.textContent = currentScore;
-
+      document.querySelector('body').style.backgroundColor = "#333";
+      // document.querySelector('body').style. = "";
+      
       // document.querySelector(".player--0").style.backgroundColor = "#222";
     } else {
+      // alert('you got one. you want to continue');
       switchPlayer();
     }
   }
@@ -110,3 +116,5 @@ btnHold.addEventListener("click", function () {
 });
 
 btnNew.addEventListener("click", init);
+
+console.log(init)
