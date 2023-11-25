@@ -117,4 +117,20 @@ btnHold.addEventListener("click", function () {
 
 btnNew.addEventListener("click", init);
 
-// console.log(init)
+
+
+
+
+
+
+
+
+
+let name1 = "arsalan";
+const age = "15";
+const occupation = "teacher";
+
+
+console.log(`my name is ${name1} and my age is ${age} and my occupation is ${occupation} `);
+
+console.log(init)
