@@ -133,4 +133,4 @@ const occupation = "teacher";
 
 console.log(`my name is ${name1} and my age is ${age} and my occupation is ${occupation} `);
 
-console.log(init)
+// console.log(init)
