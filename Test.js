@@ -14,4 +14,4 @@
 const arr = [7, 2, 2];
 // const badNewArr = [1, 2, 4];
 
-console.log(arr)
+// console.log(arr)
