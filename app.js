@@ -56,16 +56,14 @@ btnRoll.addEventListener("click", function () {
     diceEl.src = `dice-${dice}.png`;
     // alert('you got one. you want to continue');
 
-   
-
     if (dice !== 1) {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
       currentEl0.textContent = currentScore;
-      document.querySelector('body').style.backgroundColor = "#333";
+      document.querySelector("body").style.backgroundColor = "#333";
       // document.querySelector('body').style. = "";
-      
+
       // document.querySelector(".player--0").style.backgroundColor = "#222";
     } else {
       // alert('you got one. you want to continue');
@@ -117,20 +115,12 @@ btnHold.addEventListener("click", function () {
 
 btnNew.addEventListener("click", init);
 
-
-
-
-
-
-
-
-
-
 let name1 = "arsalan";
 const age = "15";
 const occupation = "teacher";
 
+console.log(
+  `my name is ${name1} and my age is ${age} and my occupation is ${occupation} `
+);
 
-console.log(`my name is ${name1} and my age is ${age} and my occupation is ${occupation} `);
-
-console.log(init)
+// console.log(init);

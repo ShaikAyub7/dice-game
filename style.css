@@ -27,12 +27,12 @@ main {
   position: relative;
   width: 100rem;
   height: 60rem;
- /* justify-content: center;
+  /* justify-content: center;
  align-content: center; */
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.50);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   overflow: hidden;
   display: flex;
@@ -163,7 +163,7 @@ main {
 }
 
 .player--winner {
-  background-image:  linear-gradient(to top left, #e2afff 20%, #c0fdff 80%);;
+  background-image: linear-gradient(to top left, #e2afff 20%, #c0fdff 80%);
   /* 5e60ce */
 }
 
@@ -174,32 +174,31 @@ main {
 .hidden {
   display: none;
 }
-.player2{
-   top: 5%;
-   left: 38% ;
+.player2 {
+  top: 5%;
+  left: 38%;
   position: absolute;
   /* background-image:linear-gradient(to left top, #a2d2ff 20%, #ff758f 80%); */
   font-size: 50px;
-  border: 2px  black;
+  border: 2px black;
   padding: 5px 5px 5px 5px;
   border-radius: 20px;
   /* display: flex; */
-  font-family:Georgia, 'Times New Roman', Times, serif;
-
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.points{
+.points {
   /* display: grid;
   grid-template-columns: 2px 2px; */
   border-radius: 10px;
   line-height: 30px;
-  position:absolute;
+  position: absolute;
   bottom: 10px;
-  right:10px;
+  right: 10px;
   padding: 5px 5px 5px 5px;
   background-color: #fff;
-  box-shadow:0px 3px 5px #333;
+  box-shadow: 0px 3px 5px #333;
 }
-  /* animation: animation 2s infinite ;
+/* animation: animation 2s infinite ;
   
 }
 @keyframes animation {
